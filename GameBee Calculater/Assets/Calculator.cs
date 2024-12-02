@@ -124,6 +124,20 @@ public class Calculator : MonoBehaviour
 
         return result;
     }
+
+
+    public void AddInput(string input)
+    {
+        expressionField.text += input;
+    }
+
+    public void ClearLastInput()
+    {
+        string expression = expressionField.text;
+        expression = expression.Remove(expression.Length-1);
+        Debug.Log(expression);
+        expressionField.text = expression;
+    }
 }
 
 
